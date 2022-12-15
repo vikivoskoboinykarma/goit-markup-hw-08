@@ -1,0 +1,53 @@
+  $primary-text-color: #757575;
+  $title-text-color: #212121;
+  $accent-color: #2196f3;
+  $primary-color: #ffffff;
+  $footer-text-color: rgba(255, 255, 255, 0.6);
+  $background: #f5f5f5;
+  $hero-background: #2f303a;
+  $button-background-color: #f5f4fa;
+  $button-background-hero: #188ce8;
+  $accent-logo-color: #000000;
+  $icon-color: #afb1b8;
+  $icon-backgraund-color: rgba(255, 255, 255, 0.1);
+  $main-font: "Roboto", sans-serif;
+  $second-font: "Raleway", sans-serif;
+  $timing-funktion: cubic-bezier(0.4, 0, 0.2, 1);
+
+body {
+  background-color: $primary-color;
+  color: $primary-text-color;
+  font-family: $main-font;
+  letter-spacing: 0.03em;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+ text-decoration: none;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+
+.element {
+  padding-top: 60px;
+  padding-bottom: 60px;
+
+@include mq(desktop) {
+      padding-top: 94px;
+      padding-bottom: 94px;
+    }
+}
+

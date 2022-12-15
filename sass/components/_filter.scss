@@ -1,0 +1,40 @@
+.filter__list {
+    display: flex;
+    margin-top: 0;
+    margin-bottom: 50px;
+    justify-content: center;
+}
+
+.filter__item {
+    margin-left: 8px;
+}
+
+
+.filter__button {
+    padding-top: 6px;
+    padding-right: 22px;
+    padding-bottom: 6px;
+    padding-left: 22px;
+    color: $title-text-color;
+    background-color: $button-background-color;
+    border: transparent;
+    cursor: pointer;
+    font-family: $main-font;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.62;
+    text-align: center;
+    letter-spacing: 0.03em;
+    border-radius: 4px;
+    transition: color 250ms $timing-funktion,
+    box-shadow 250ms $timing-funktion,
+        background-color 250ms $timing-funktion;
+
+    &:hover,  &:focus {
+            color: $primary-color;
+            background-color: $accent-color;
+            box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
+                0px 2px 2px rgba(0, 0, 0, 0.12);
+        }
+}
+

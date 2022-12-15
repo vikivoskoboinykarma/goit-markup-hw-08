@@ -1,0 +1,101 @@
+.page-header {
+    border: 1px solid #ececec;
+}
+
+.nav {
+    display: flex;
+    align-items: center;
+}
+
+.site-nav {
+    display: flex;
+    margin-left: 93px;
+}
+
+.site-nav__link {
+    color: $title-text-color;
+    text-decoration: none;
+
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms $timing-funktion;
+
+    &:hover, &:focus {
+            color: $accent-color;
+        }
+    
+        &--carrent {
+            color: $accent-color;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 1.14;
+            letter-spacing: 0.02em;
+            position: relative;
+        }
+    
+        &--carrent::after {
+            position: absolute;
+            bottom: -33.5px;
+            right: 0px;
+            content: "";
+            width: 100%;
+            height: 4px;
+            background-color: $accent-color;
+            border-radius: 2px;
+        }
+}
+
+.site-nav__item {
+    display: block;
+    padding-top: 32px;
+    padding-bottom: 32px;
+    margin-left: 50px;
+}
+
+.auth-nav {
+    display: flex;
+    margin-left: auto;
+    align-self: flex-end;
+
+    &__item {
+            margin-left: 50px;
+        }
+}
+
+
+.contakt-link {
+    padding-top: 32px;
+    padding-bottom: 32px;
+    display: inline-block;
+    display: flex;
+    align-items: center;
+    color: $primary-text-color;
+    text-decoration: none;
+
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 1.14;
+    letter-spacing: 0.02em;
+    transition: color 250ms $timing-funktion;
+
+   &:hover, &:focus {
+            color: $accent-color;
+        }
+}
+
+
+
+.contakt-link__icon {
+    margin-right: 10px;
+    fill: currentColor;
+    transition: fill 250ms $timing-funktion;
+
+    &:hover, &:focus {
+            fill: $accent-color;
+        }
+}
+
