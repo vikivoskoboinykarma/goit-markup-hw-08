@@ -1,14 +1,27 @@
 .footer {
     background-color: $hero-background;
-    display: flex;
     padding-top: 60px;
     padding-bottom: 60px;
 }
 
 .cell {
     display: flex;
-    align-items: baseline;
-    justify-content: space-between;
+        flex-wrap: wrap;
+        align-items: baseline;
+        justify-content: center;
+        gap: 60px;
+        
+@media screen and (min-width: 768px) {
+        
+        gap: 60px 160px;
+    }
+        @include mq(tablet) {
+                gap: 60px 160px;
+            }
+      @include mq(desktop) {
+                    align-items: baseline;
+                    flex-wrap: nowrap;
+                    gap: 0;                }
 }
 
 .footer__list {
