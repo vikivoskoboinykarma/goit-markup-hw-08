@@ -1,9 +1,8 @@
 .customers__list {
-
-            flex-wrap: wrap;
-            
-            align-items: center;
-            text-align: center;
+            display: flex;
+                flex-wrap: wrap;
+                gap: 30px;
+        
 
             @include mq(tablet) {
                     display: flex;
@@ -21,12 +20,19 @@
 .clients {
     width: 210px;
     height: 92px;
+    width: 100%;
+    display: flex;
+   // flex-wrap: wrap;
+   // gap: 30px 30px;
+@include mq(phone-only) {
+        flex-basis: calc((100% - 30px) / 2);
+    }
 
-    @include mq(phon-only) {
-            flex-basis: calc(100% / 2);
-        }
+ //flex-basis: calc(100% / 2);
+        
 
     @include mq(tablet) {
+        flex-wrap: wrap;
         gap: 30px 30px;
         width: 226px;
     }

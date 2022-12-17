@@ -4,7 +4,17 @@
 
 .page-group__list {
    align-items: center;
-   
+                @include mq(tablet) {
+                        display: flex;
+                        flex-wrap: wrap;
+                        gap: 30px;
+                    }
+                
+                    @include mq(desktop) {
+                        display: flex;
+                        flex-wrap: nowrap;
+                        
+                    }
 }
 
 .team {
@@ -18,14 +28,25 @@
 .team__img {
     width: 450px;
         height: 460px;
-    margin-bottom: 30px;
+
+    @include mq(tablet) {
+            width: 354px;
+                height: 374px;
+        }
+    
+        @include mq(desktop) {
+        width: 270px;
+            height: 260px;
+    
+        }
 }
 
 .team__title {
     margin-top: 0;
     margin-bottom: 10px;
     color: $title-text-color;
-
+    padding-top: 30px;
+    
     font-weight: 500;
     font-size: 16px;
     line-height: 1.19;
@@ -35,7 +56,7 @@
 .team__text {
     margin-top: 0;
     margin-bottom: 0;
-
+    
     font-weight: 400;
     font-size: 16px;
     line-height: 1.19;

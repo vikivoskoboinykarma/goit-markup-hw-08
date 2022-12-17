@@ -5,26 +5,40 @@
 }
 
 .cell {
-    display: flex;
-        flex-wrap: wrap;
-        align-items: baseline;
-        justify-content: center;
-        gap: 60px;
-        
-@media screen and (min-width: 768px) {
-        
-        gap: 60px 160px;
-    }
-        @include mq(tablet) {
-                gap: 60px 160px;
+   
+        @include mq(phone) {
+                display: flex;
+                    flex-wrap: wrap;
+                
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 60px;
             }
-      @include mq(desktop) {
-                    align-items: baseline;
-                    flex-wrap: nowrap;
-                    gap: 0;                }
+        
+        @include mq(tablet) {
+            
+                align-items: baseline;
+              flex-wrap: nowrap;
+              gap: 0;
+            }
+          @include mq(desktop) {
+              align-items: baseline;
+              flex-wrap: nowrap;
+              gap: 0;
+            padding-top: 30px;
+          }
 }
+.cell__block {
+    display: flex;
+        flex-direction: column;
+        align-items: center;
+ }
 
 .footer__list {
+     display: flex;
+    flex-direction: column;
+    align-items: center;
     text-decoration: none;
     font-weight: 400;
     font-size: 14px;
@@ -33,9 +47,12 @@
 }
 
 .footer__adress {
-    display: block;
-    margin-top: 20px;
+   display: block;
+    margin-top: 28px;
     color: $primary-color;
+    @include mq(desktop) {
+            margin-top: 20px;
+        }
 }
 
 .footer__link {
@@ -51,7 +68,14 @@
 }
 
 .join {
-    margin-left: 70px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+ 
+    @include mq(desktop) {
+            margin-left: 70px;
+        }
+   
 }
 
 .join__title {
@@ -67,13 +91,16 @@
 
 .action {
     display: flex;
-    padding-bottom: 30px;
+  
     margin-top: 16px;
     gap: 10px;
     list-style: none;
     flex-direction: row;
     align-items: center;
     justify-content: center;
+    @include mq(desktop) {
+            padding-bottom: 30px;
+        }
 }
 .action__link {
     display: flex;
@@ -110,33 +137,52 @@
 
 
 .subscription {
-    position: relative;
+    //position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+        justify-content: center;
 }
 
 .subscription__form {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    margin-left: 93px;
+    display: block;
+    text-align: center;
+  
+  //  display: flex;
+     //   flex-wrap: wrap;
+     //   flex-direction: column;
+  //  justify-content: center;
+   //align-items: center;
+    
+
+    @include mq(desktop) {
+        margin-top: 20px;
+            margin-left: 93px;
+        }
+   // margin-left: 93px;
 }
 
 .subscription__label {
-    width: 358px;
+   // width: 358px;
+    width: 100%;
     font-weight: 700;
     font-size: 14px;
     line-height: 1.14;
     text-transform: uppercase;
     padding-top: 12px;
     color: $primary-color;
+   
 }
 
 .subscription__input {
-    resize: none;
+   // resize: none;
     color: $primary-color;
     background-color: transparent;
-    width: 358px;
+    max-width: 450px;
     height: 50px;
     margin-top: 20px;
+    margin-bottom: 20px;
+    width: 100%;
 
     padding-left: 16px;
     border: 1px solid rgba(255, 255, 255, 0.3);
@@ -144,6 +190,10 @@
     border-radius: 4px;
     transition: border 250ms $timing-funktion,
         filter 250ms $timing-funktion;
+
+        @include mq(desktop) {
+                width: 358px;
+            }
 
     &::placeholder {
             font-weight: 400;
@@ -153,7 +203,7 @@
             align-items: center;
             letter-spacing: 0.03em;
             color: rgba(255, 255, 255, 0.6);
-            color: var(--primary-color);
+            color: $primary-color;
         }
 
       &:focus {
@@ -165,10 +215,11 @@
 
 
 .btn {
-    display: inline-block;
+   
+   // display: inline-block;
     width: 200px;
     height: 50px;
-    margin-left: 12px;
+   // margin-left: 12px;
 
     padding-left: 28px;
     padding-right: 62px;
@@ -192,11 +243,21 @@
         }
 }
 
+.box{
+        position: relative;
+        display: inline-block;
+        text-align: center;
+        width: 200px;
+            height: 50px;
+         
+    }
 
 .subscription__icon {
     pointer-events: none;
     position: absolute;
-    right: 28px;
-    top: 50%;
-    transform: translateY(40%);
+    left: 150px;
+    transform: translateY(15px);
+
+  
+    
 }
