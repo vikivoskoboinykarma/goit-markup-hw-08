@@ -1,9 +1,21 @@
 .customers__list {
-        display: flex;
+
             flex-wrap: wrap;
             
             align-items: center;
             text-align: center;
+
+            @include mq(tablet) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
+            
+                @include mq(desktop) {
+                    display: flex;
+                    flex-wrap: wrap;
+                    gap: 30px;
+                }
 }
 
 .clients {

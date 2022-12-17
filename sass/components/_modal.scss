@@ -11,6 +11,8 @@
     transition: opacity 250ms $timing-funktion;
 
     background: rgba(0, 0, 0, 0.2);
+    padding: 94px 15px;
+    overflow-y: scroll;
 }
 
 .is-hidden {
@@ -23,15 +25,20 @@
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    min-width: 528px;
-    min-height: 581px;
-
+    min-width: 450px;
+    min-height: 609px;
+width: 100%;
     border-radius: 4px;
     opacity: 1;
     background-color: $primary-color;
 
     transition: transform 250ms $timing-funktion,
         opacity 250ms $timing-funktion;
+
+        @include mq(desktop) {
+                min-width: 528px;
+                    min-height: 581px;
+            }
 }
 
 .modal__close {

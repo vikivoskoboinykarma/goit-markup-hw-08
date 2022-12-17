@@ -1,15 +1,17 @@
 .page-header {
+position: relative;
     border: 1px solid #ececec;
 }
 
+
 .nav {
-    display: flex;
+
     align-items: center;
 }
 
 .site-nav {
-    display: flex;
-    margin-left: 93px;
+    display: block;
+   
 }
 
 .site-nav__link {
@@ -56,9 +58,7 @@
 }
 
 .auth-nav {
-    display: flex;
-    margin-left: auto;
-    align-self: flex-end;
+   
 
     &__item {
             margin-left: 50px;
@@ -69,8 +69,7 @@
 .contakt-link {
     padding-top: 32px;
     padding-bottom: 32px;
-    display: inline-block;
-    display: flex;
+   
     align-items: center;
     color: $primary-text-color;
     text-decoration: none;
@@ -90,7 +89,7 @@
 
 
 .contakt-link__icon {
-    margin-right: 10px;
+   
     fill: currentColor;
     transition: fill 250ms $timing-funktion;
 

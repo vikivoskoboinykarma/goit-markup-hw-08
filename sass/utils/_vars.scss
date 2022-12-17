@@ -19,6 +19,10 @@ body {
   color: $primary-text-color;
   font-family: $main-font;
   letter-spacing: 0.03em;
+
+  body.modal-open {
+      overflow: hidden;
+  }
 }
 
 ul {
@@ -40,6 +44,9 @@ h5 {
   padding: 0;
 }
 
-
-
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
 
