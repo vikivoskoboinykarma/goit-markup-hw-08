@@ -21,11 +21,9 @@
   <header class="page-header">
       <div class="container nav">
         <a href="" class="logo">Web<span class="logo-header">Studio</span></a>
-          
-        <button type="button" class="menu-button"
-         aria-expanded="false"
-         aria-controls="menu-container" 
-          data-menu-button>
+          <button  class="menu-toggle js-open-menu"
+          aria-expanded="false"
+          aria-controls="mobile-menu">
             <svg  width="40" height="40"
            
             aria-label="Перемикач мобільного меню">
@@ -33,9 +31,10 @@
               <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40px"></use>
              </svg>
           </button>
-          <div class="menu-container is-open" id="menu-container" data-menu>
+       
+          <div class="menu-container js-menu-container" id="mobile-menu">
+             
         <nav class="nav">
-          
           <ul class="site-nav">
             <li class="site-nav__item">
               <a href="./index.html" class="site-nav__link  site-nav__link--carrent">Студія</a>
@@ -56,7 +55,7 @@
             >
           </li>
           <li class="auth-nav__item">
-            <a href="tel:+380961111111" class="contakt-link">
+            <a href="tel:+380961111111" class="contakt-link tell">
               <svg class="contakt-link__icon" width="10" height="16">
                 <use href="./img/symbol-defs.svg#icon-smartphone"></use>
               </svg>
@@ -64,8 +63,19 @@
             >
           </li>
         </ul>
-        <ul class="">
-          <li class=""></li>
+        <ul class="mobile-socials">
+          <li class="mobile-socials__item">
+            <a class="mobile-socials__link">Instagram</a>
+          </li>
+           <li class="mobile-socials__item">
+            <a class="mobile-socials__link">Twitter</a>
+          </li>
+           <li class="mobile-socials__item">
+            <a class="mobile-socials__link">Facebook</a>
+          </li>
+           <li class="mobile-socials__item">
+            <a class="mobile-socials__link">LinkedIn</a>
+          </li>
         </ul>
       </div>
         

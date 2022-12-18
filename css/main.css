@@ -4,7 +4,7 @@ body {
   font-family: "Roboto", sans-serif;
   letter-spacing: 0.03em;
 }
-body body.modal-open {
+body body.no-scroll {
   overflow: hidden;
 }
 
@@ -387,12 +387,31 @@ summary {
   position: relative;
   border: 1px solid #ececec;
 }
+@media screen and (min-width: 768px) {
+  .page-header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
 
-.nav {
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+@media screen and (max-width: 767.98px) {
+  .nav {
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-bottom: auto;
+  }
 }
 @media screen and (min-width: 768px) {
   .nav {
@@ -403,18 +422,43 @@ summary {
 }
 
 .site-nav {
-  display: block;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 32px;
+}
+@media screen and (min-width: 768px) {
+  .site-nav {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    gap: 0;
+  }
 }
 
 .site-nav__link {
   color: #212121;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.175;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+@media screen and (min-width: 768px) {
+  .site-nav__link {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 .site-nav__link:hover, .site-nav__link:focus {
   color: #2196f3;
@@ -423,10 +467,16 @@ summary {
   color: #2196f3;
   text-decoration: none;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 40px;
+  line-height: 1.175;
   letter-spacing: 0.02em;
   position: relative;
+}
+@media screen and (min-width: 768px) {
+  .site-nav__link--carrent {
+    font-size: 14px;
+    line-height: 1.14;
+  }
 }
 @media screen and (min-width: 768px) {
   .site-nav__link--carrent::after {
@@ -450,10 +500,29 @@ summary {
   }
 }
 
+.auth-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+  padding-bottom: 32px;
+}
 @media screen and (min-width: 768px) {
   .auth-nav__item {
     margin-left: 50px;
   }
+}
+
+.contakt-link.tell {
+  font-weight: 500;
+  font-size: 34px;
+  line-height: 1.18;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 .contakt-link {
@@ -464,14 +533,16 @@ summary {
   text-decoration: none;
   font-style: normal;
   font-weight: 500;
-  font-size: 14px;
-  line-height: 1.14;
+  font-size: 24px;
+  line-height: 1.17;
   letter-spacing: 0.02em;
   -webkit-transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 @media screen and (min-width: 768px) {
   .contakt-link {
+    font-size: 14px;
+    line-height: 1.14;
     padding-top: 32px;
     padding-bottom: 32px;
   }
@@ -485,11 +556,16 @@ summary {
   -webkit-transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+@media screen and (max-width: 767.98px) {
+  .contakt-link__icon {
+    display: none;
+  }
+}
 .contakt-link__icon:hover, .contakt-link__icon:focus {
   fill: #2196f3;
 }
 
-.menu-button {
+.menu-toggle {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -499,30 +575,31 @@ summary {
   background-color: transparent;
 }
 @media screen and (min-width: 768px) {
-  .menu-button {
+  .menu-toggle {
     display: none;
   }
 }
 
-.menu-button .icon-cross {
+.menu-toggle .icon-cross {
   display: none;
 }
 
-.menu-button.is-open .icon-cross {
+.menu-toggle.is-open .icon-cross {
   display: block;
 }
 
-.menu-button.is-open .icon-menu {
+.menu-toggle.is-open .icon-menu {
+  display: none;
+}
+
+.menu-toggle.is-open .logo {
   display: none;
 }
 
 .menu-container {
-  position: absolute;
-  background-color: palegoldenrod;
   font-size: 40px;
   line-height: 1.175;
   letter-spacing: 0.02em;
-  padding: 48px 40px;
 }
 @media screen and (max-width: 767.98px) {
   .menu-container {
@@ -531,6 +608,21 @@ summary {
     top: 100%;
     left: 0;
     width: 100%;
+    padding: 48px 40px;
+    height: 796px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    background: #FFFFFF;
+    -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.04), 0px 2px 4px rgba(0, 0, 0, 0.08), 0px 1px 3px rgba(0, 0, 0, 0.16);
   }
   .menu-container.is-open {
     display: block;
@@ -553,18 +645,30 @@ summary {
   }
 }
 
-.navigation,
-.contacts {
-  height: 50px;
-  width: 140px;
+.mobile-socials {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media screen and (min-width: 768px) {
+  .mobile-socials {
+    display: none;
+  }
 }
 
-.navigation {
-  outline: 1px solid teal;
-}
-
-.contacts {
-  outline: 1px solid orange;
+.mobile-socials__link {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 1.22;
+  letter-spacing: 0.02em;
+  color: #2196f3;
 }
 
 /* hero*/

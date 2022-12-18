@@ -1,13 +1,25 @@
 .page-header {
 position: relative;
 
+@include mq(tablet) {
+    display: flex;
+        align-items: center;
+    }
+
     border: 1px solid #ececec;
 }
 
 
 .nav {
-position: relative;
-display: flex;
+
+    @include mq(phone-only) {
+        position: relative;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: auto;
+        }
+
 @include mq(tablet) {
         align-items: center;
     }
@@ -15,19 +27,33 @@ display: flex;
 }
 
 .site-nav {
-    display: block;
-   
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+  
+
+@include mq(tablet) {
+        align-items: center;
+        flex-direction: row;
+        gap: 0;
+    }
 }
 
 .site-nav__link {
     color: $title-text-color;
     text-decoration: none;
 
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+   font-weight: 500;
+    font-size: 40px;
+    line-height: 1.175;
     letter-spacing: 0.02em;
     transition: color 250ms $timing-funktion;
+
+    @include mq(tablet) {
+           
+                font-size: 14px;
+                line-height: 1.14;
+        }
 
     &:hover, &:focus {
             color: $accent-color;
@@ -37,10 +63,16 @@ display: flex;
             color: $accent-color;
             text-decoration: none;
             font-weight: 500;
-            font-size: 14px;
-            line-height: 1.14;
+            font-size: 40px;
+                line-height: 1.175;
             letter-spacing: 0.02em;
             position: relative;
+
+            @include mq(tablet) {
+            
+                    font-size: 14px;
+                    line-height: 1.14;
+                }
         }
     
         &--carrent::after {
@@ -59,9 +91,7 @@ display: flex;
 }
 
 .site-nav__item {
-    
-    
-
+   
     @include mq(tablet) {
         display: block;
             padding-top: 32px;
@@ -71,7 +101,10 @@ display: flex;
 }
 
 .auth-nav {
-   
+    display: flex;
+    gap: 32px;
+    flex-direction: column-reverse;
+    padding-bottom: 32px;
 
     &__item {
         @include mq(tablet) {
@@ -81,22 +114,28 @@ display: flex;
         }
 }
 
-
+.contakt-link.tell{
+    font-weight: 500;
+        font-size: 34px;
+        line-height: 1.18;
+        letter-spacing: 0.02em;
+        color: $accent-color;
+}
 .contakt-link {
- 
-   
     align-items: center;
     color: $primary-text-color;
     text-decoration: none;
 
     font-style: normal;
     font-weight: 500;
-    font-size: 14px;
-    line-height: 1.14;
+font-size: 24px;
+    line-height: 1.17;
     letter-spacing: 0.02em;
     transition: color 250ms $timing-funktion;
 
     @include mq(tablet) {
+        font-size: 14px;
+            line-height: 1.14;
         padding-top: 32px;
             padding-bottom: 32px;
         }
@@ -112,6 +151,10 @@ display: flex;
    
     fill: currentColor;
     transition: fill 250ms $timing-funktion;
+
+    @include mq(phone-only) {
+            display: none;
+        }
 
     &:hover, &:focus {
             fill: $accent-color;

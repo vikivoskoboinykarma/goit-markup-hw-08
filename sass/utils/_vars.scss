@@ -20,9 +20,9 @@ body {
   font-family: $main-font;
   letter-spacing: 0.03em;
 
-  body.modal-open {
+  body.no-scroll {
       overflow: hidden;
-  }
+    }
 }
 
 ul {
