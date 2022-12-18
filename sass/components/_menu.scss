@@ -9,6 +9,10 @@
         display: none;
     }
 }
+.icon-cross {
+   z-index: 999;
+   fill: $title-text-color;
+}
 
 .menu-toggle .icon-cross {
     display: none;
@@ -16,15 +20,12 @@
 
 .menu-toggle.is-open .icon-cross {
     display: block;
+
 }
-
-
 .menu-toggle.is-open .icon-menu {
     display: none;
 }
-.menu-toggle.is-open .logo {
-    display: none;
-}
+
 
 .menu-container {
     font-size: 40px;
@@ -34,9 +35,10 @@
     @include mq(phone-only) {
         display: none;
         position: absolute;
-        top: 100%;
+        top: 0;
         left: 0;
-        width: 100%;
+        width: 100vw;
+        height: 100vh;
         padding: 48px 40px;
             height: 796px;
             display: flex;

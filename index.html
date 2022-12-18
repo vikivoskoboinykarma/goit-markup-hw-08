@@ -28,7 +28,7 @@
            
             aria-label="Перемикач мобільного меню">
               <use class="icon-menu" href="./img/symbol-defs.svg#icon-menu_40px"></use>
-              <use class="icon-cross" href="./img/symbol-defs.svg#icon-close_40px"></use>
+              <use class="icon-cross" href="./img/symbol-defs.svg#icon-close"></use>
              </svg>
           </button>
        
@@ -153,12 +153,16 @@
           <h2 class="title">Чим ми займаємося</h2>
           <ul class="specialty__list">
             <li class="item">
-              <img
-                src="./img/img_1.jpg"
+              <img 
+               srcset="
+          ./img/speciality/img_370.jpg 1x,
+          ./img/speciality/img_740.jpg 2x  "
+                src="./img/speciality/img_370.jpg"
                 alt="Веб-сайти"
                 width="370"
                 height="294"
                 class="img"
+                loading="lazy"
               />
               <div class="specialty__thumb">
                 <h3 class="specialty__actions">Десктопні додатки</h3>

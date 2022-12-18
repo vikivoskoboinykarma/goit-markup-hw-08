@@ -4,13 +4,49 @@
     
     margin-left: auto;
     margin-right: auto;
-    background-image: linear-gradient(to right,
-            rgba(47, 48, 58, 0.4),
-            rgba(47, 48, 58, 0.4)),
-        url("../img/new_photo.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
+
+    // Mobile screen
+        background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+            url("../img/hero/Header_sm/img-480.jpg");
+    
+        // retina mobile screen
+        @media (min-device-pixel-ratio: 2),
+        (min-resolution: 192dpi),
+        (min-resolution: 2dppx) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url("../img/hero/Header_sm/img-760.jpg");
+        }
+    
+        // Tablet screen
+        @media screen and (min-width: 481px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../../img/hero/Header/img_768.jpg);
+    
+            // retina tablet screen
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/price/bg-img_md-@2x.jpg);
+            }
+        }
+    
+        // Desktop screen
+        @media screen and (min-width: 769px) {
+            background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                url(../images/price/bg-img_lg-@1x.jpg);
+    
+            // retina desktop screen
+            @media (min-device-pixel-ratio: 2),
+            (min-resolution: 192dpi),
+            (min-resolution: 2dppx) {
+                background-image: linear-gradient(to right, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+                    url(../images/price/bg-img_lg-@2x.jpg);
+            }
+        }
 }
 
 .hero {
