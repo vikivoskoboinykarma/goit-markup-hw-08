@@ -14,6 +14,7 @@ textarea {
     padding: 40px;
 
     @include mq(desktop) {
+       
             min-width: 528px;
             min-height: 581px;
         }
@@ -26,15 +27,23 @@ textarea {
     text-align: center;
     color: $title-text-color;
     margin-bottom: 12px;
+
+    @include mq(desktop) {
+           
+        }
+             
 }
 
 .form__fild {
     position: relative;
-    width: 448px;
+    width: 370px;
     display: flex;
     flex-direction: column;
     letter-spacing: 0.01em;
     margin-bottom: 10px;
+    @include mq(desktop) {
+        width: 448px;
+        }
 }
 
 .form__label {
@@ -48,12 +57,16 @@ textarea {
 .form__input {
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px;
-    width: 448px;
+    width: 370px;
     height: 40px;
     display: flex;
     flex-direction: column;
     margin-top: 4px;
     padding-left: 42px;
+
+    @include mq(desktop) {
+            width: 448px;
+        }
 
     &:focus {
         outline: 1px solid $accent-color;
@@ -153,9 +166,14 @@ height: 120px;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 14px;
+    font-size: 12px;
     line-height: 1.71;
     letter-spacing: 0.03em;
+
+    @include mq(desktop) {
+        font-size: 14px;
+            line-height: 1.71;
+        }
 }
 
 .check__box {

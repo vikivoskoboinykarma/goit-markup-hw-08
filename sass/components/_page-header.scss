@@ -1,12 +1,17 @@
 .page-header {
 position: relative;
+
     border: 1px solid #ececec;
 }
 
 
 .nav {
-
-    align-items: center;
+position: relative;
+display: flex;
+@include mq(tablet) {
+        align-items: center;
+    }
+   
 }
 
 .site-nav {
@@ -39,36 +44,46 @@ position: relative;
         }
     
         &--carrent::after {
-            position: absolute;
-            bottom: -33.5px;
-            right: 0px;
-            content: "";
-            width: 100%;
-            height: 4px;
-            background-color: $accent-color;
-            border-radius: 2px;
+            @include mq(tablet) {
+                    position: absolute;
+                        bottom: -33.5px;
+                        right: 0px;
+                        content: "";
+                        width: 100%;
+                        height: 4px;
+                        background-color: $accent-color;
+                        border-radius: 2px;
+                }
+           
         }
 }
 
 .site-nav__item {
-    display: block;
-    padding-top: 32px;
-    padding-bottom: 32px;
-    margin-left: 50px;
+    
+    
+
+    @include mq(tablet) {
+        display: block;
+            padding-top: 32px;
+            padding-bottom: 32px;
+            margin-left: 50px;
+        }
 }
 
 .auth-nav {
    
 
     &__item {
-            margin-left: 50px;
+        @include mq(tablet) {
+                margin-left: 50px;
+            }
+           
         }
 }
 
 
 .contakt-link {
-    padding-top: 32px;
-    padding-bottom: 32px;
+ 
    
     align-items: center;
     color: $primary-text-color;
@@ -80,6 +95,11 @@ position: relative;
     line-height: 1.14;
     letter-spacing: 0.02em;
     transition: color 250ms $timing-funktion;
+
+    @include mq(tablet) {
+        padding-top: 32px;
+            padding-bottom: 32px;
+        }
 
    &:hover, &:focus {
             color: $accent-color;

@@ -13,6 +13,9 @@
     background: rgba(0, 0, 0, 0.2);
     padding: 94px 15px;
     overflow-y: scroll;
+    @include mq(desktop) {
+            padding: 0;
+        }
 }
 
 .is-hidden {
@@ -21,13 +24,13 @@
 }
 
 .modal {
-    position: absolute;
-    top: 50%;
+position: absolute;
+top: 50%;
     left: 50%;
     transform: translate(-50%, -50%) scale(1);
-    min-width: 450px;
-    min-height: 609px;
-width: 100%;
+    width: 450px;
+    height: 609px;
+
     border-radius: 4px;
     opacity: 1;
     background-color: $primary-color;
@@ -36,8 +39,13 @@ width: 100%;
         opacity 250ms $timing-funktion;
 
         @include mq(desktop) {
+           position: absolute;
+               top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%) scale(1);
                 min-width: 528px;
                     min-height: 581px;
+              
             }
 }
 

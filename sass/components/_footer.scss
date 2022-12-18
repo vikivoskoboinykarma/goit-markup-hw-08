@@ -17,22 +17,31 @@
             }
         
         @include mq(tablet) {
-            
+            flex-direction: row;
                 align-items: baseline;
-              flex-wrap: nowrap;
-              gap: 0;
+              flex-wrap: wrap;
+              gap: 60px 160px;
             }
           @include mq(desktop) {
               align-items: baseline;
-              flex-wrap: nowrap;
-              gap: 0;
-            padding-top: 30px;
+           gap: 0;
+        
+                justify-content: space-between;
           }
 }
 .cell__block {
     display: flex;
         flex-direction: column;
         align-items: center;
+        @include mq(tablet-only) {
+        display: flex;
+                align-items: baseline;
+                flex-wrap: nowrap;
+                gap: 0;
+            }
+     @include mq(desktop) {
+         display: block;
+         }
  }
 
 .footer__list {
@@ -44,6 +53,10 @@
     font-size: 14px;
     line-height: 1.71;
     font-style: normal;
+
+@include mq(desktop) {
+    display: block;
+    }
 }
 
 .footer__adress {
@@ -137,11 +150,15 @@
 
 
 .subscription {
-    //position: relative;
+   
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
         justify-content: center;
+        @include mq(desktop) {
+        
+            display: block;
+            }
 }
 
 .subscription__form {
@@ -156,14 +173,15 @@
     
 
     @include mq(desktop) {
-        margin-top: 20px;
-            margin-left: 93px;
+        display: flex;
+            justify-content: center;
+            align-items: flex-end;
+            margin-left: 81px;
         }
-   // margin-left: 93px;
 }
 
 .subscription__label {
-   // width: 358px;
+   
     width: 100%;
     font-weight: 700;
     font-size: 14px;
@@ -171,6 +189,11 @@
     text-transform: uppercase;
     padding-top: 12px;
     color: $primary-color;
+
+    @include mq(desktop) {
+    
+        width: 358px;
+        }
    
 }
 
@@ -215,12 +238,9 @@
 
 
 .btn {
-   
-   // display: inline-block;
     width: 200px;
     height: 50px;
-   // margin-left: 12px;
-
+  
     padding-left: 28px;
     padding-right: 62px;
 
@@ -238,6 +258,12 @@
     transition: background-color 250ms $timing-funktion,
         box-shadow 250ms $timing-funktion;
 
+        @include mq(desktop) {
+            display: inline-block;
+           
+
+            }
+
     &:hover, &:focus {
             background-color: $button-background-hero;
         }
@@ -249,6 +275,10 @@
         text-align: center;
         width: 200px;
             height: 50px;
+            @include mq(desktop) {
+                  margin-bottom:20px;
+                  margin-left: 12px;
+                }
          
     }
 
@@ -258,6 +288,9 @@
     left: 150px;
     transform: translateY(15px);
 
-  
+    @include mq(desktop) {
+            left: 150px;
+                transform: translateY(15px);
+        }
     
 }
